@@ -110,7 +110,12 @@ Once logged into PgAdmin4:
 
 | Variable      | Value                                                |
 | ------------- | -----------------------------------------------------|
-| host          | host.docker.internal (defined in docker-compose.yml) |
+| host          | host.docker.internal                                 |
 | username      | POSTGRES_USER (defined in docker-compose.yml)        |
 |password       |  POSTGRES_PASSWORD (defined in docker-compose.yml)   |
+
+To verify that the database is updated correctly, create a new realm in Keycloak. Then, in pgAdmin, query the realms table and confirm that the newly created realm appears in the results
+```
+select * from realm
+```
 
