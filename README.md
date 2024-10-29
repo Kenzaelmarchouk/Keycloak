@@ -105,9 +105,11 @@ docker compose up -d
 Once logged into PgAdmin4:
 
 1. Add a new server connection.
-2. Set value in connection section to connect to the PostgreSQL instance: 
-| Variable      | Value                                               |
-| ------------- | --------------------------------------------------- |
+2. Set value in connection section to connect to the PostgreSQL instance:
+
+
+| Variable      | Value                                                |
+| ------------- | -----------------------------------------------------|
 | host          | host.docker.internal (defined in docker-compose.yml) |
 | username      | POSTGRES_USER (defined in docker-compose.yml)        |
 |password       |  POSTGRES_PASSWORD (defined in docker-compose.yml)   |
