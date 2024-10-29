@@ -14,8 +14,8 @@ Docker and Docker compose Come pre-installed with **Docker Desktop**
 
 ### Getting Started
 #### Step1 - Create docker-compose.yml file
-<$>[note]
-[label Labels support _inline_ **markdown**]
-**Note:** Use this for notes on a publication.
-<$>
+server {
+    listen 80 default_server;
+    . . .
+}
 
