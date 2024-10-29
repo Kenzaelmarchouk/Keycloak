@@ -89,11 +89,14 @@ networks:
   localnet:
     name: localnet
 ```
-#### Explication of docker-compose.yml
-### Creates and starts containers
+**Explication of docker-compose.yml**
+#### Step2 - Creates and starts containers
+Start all services with Docker Compose:
 ```
-docker compose up
+docker compose up -d
 ```
+> [!NOTE]
+> This command will download the necessary images if they aren’t already present and start Keycloak, PostgreSQL, and PgAdmin4 containers.
 
 
 
