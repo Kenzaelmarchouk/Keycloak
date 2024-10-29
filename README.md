@@ -14,16 +14,10 @@ Docker and Docker compose Come pre-installed with **Docker Desktop**
 
 ### Getting Started
 #### Step1 - Create docker-compose.yml file
-```nginx
-[label /etc/nginx/sites-available/default]
-server {
-    listen 80 <^>default_server<^>;
-    . . .
-}
-```
 
-```command
 docker-compose.yml
+```command
+
 
 version: '3'
  
@@ -95,7 +89,13 @@ networks:
   localnet:
     name: localnet
 ```
-
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
+#### Explication of docker-compose.yml
+| Services/Containers  | Second Header |Networks      |
+| ---------------------|---------------|--------------|
+| pgadm                | Content Cell  |              |
+| ---------------------|---------------|--------------|
+| postgres             | Content Cell  |              |
+|----------------------|---------------|--------------| 
+|kc                    |               |              |
+|----------------------|---------------|--------------|
 
