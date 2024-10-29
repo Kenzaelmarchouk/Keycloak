@@ -10,6 +10,12 @@ This tutorial sets up and configured in a single docker-compose.yml file:
 ### Prerequisites
 **Docker**
 **Docker compose**
-Docker and Docker compose Come pre-installed with Docker Desktop<^>variable<^>
+Docker and Docker compose Come pre-installed with **Docker Desktop**
 
+### Getting Started
+#### Step1 - Create docker-compose.yml file
+<$>[note]
+[label Labels support _inline_ **markdown**]
+**Note:** Use this for notes on a publication.
+<$>
 
