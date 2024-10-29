@@ -14,8 +14,6 @@ Docker and Docker compose Come pre-installed with **Docker Desktop**
 
 ### Getting Started
 #### Step1 - Create docker-compose.yml file
-server {
-    listen 80 default_server;
-    . . .
-}
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
 
