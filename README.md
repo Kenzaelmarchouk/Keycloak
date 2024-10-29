@@ -14,6 +14,13 @@ Docker and Docker compose Come pre-installed with **Docker Desktop**
 
 ### Getting Started
 #### Step1 - Create docker-compose.yml file
+```nginx
+[label /etc/nginx/sites-available/default]
+server {
+    listen 80 <^>default_server<^>;
+    . . .
+}
+```
 
 ```command
 docker-compose.yml
