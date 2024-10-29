@@ -14,9 +14,15 @@ Docker and Docker compose Come pre-installed with **Docker Desktop**
 
 ### Getting Started
 #### Step1 - Create docker-compose.yml file
-> [!NOTE]
-> Useful information that users should know, even when skimming content.
+
 ```command
 [environment second]
 echo "Secondary server"
 ```
+```custom_prefix((my-server)\smysql>)
+FLUSH PRIVILEGES;
+SELECT * FROM articles;
+```
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
