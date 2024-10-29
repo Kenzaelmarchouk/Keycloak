@@ -16,4 +16,6 @@ Docker and Docker compose Come pre-installed with **Docker Desktop**
 #### Step1 - Create docker-compose.yml file
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
-
+[!NOTE]
+[label Labels support _inline_ **markdown**]
+**Note:** Use this for notes on a publication.
