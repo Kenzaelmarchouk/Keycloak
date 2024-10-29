@@ -105,7 +105,7 @@ docker compose up -d
 Once logged into PgAdmin4:
 
 1. Add a new server connection.
-2. Set value in connection section to connect to the PostgreSQL instance:
+2. Set these values in connection section to connect to the PostgreSQL instance:
 
 
 | Variable      | Value                                                |
