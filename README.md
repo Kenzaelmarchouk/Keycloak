@@ -90,8 +90,10 @@ networks:
     name: localnet
 ```
 #### Explication of docker-compose.yml
-> [!NOTE]
-> **Explication of docker-compose.yml**
-> rtrt
+### Creates and starts containers
+```
+docker compose up
+```
+
 
 
