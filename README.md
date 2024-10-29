@@ -90,10 +90,8 @@ networks:
     name: localnet
 ```
 #### Explication of docker-compose.yml
-| Services/Containers  | Second Header |Networks      |
-| ---------------------|---------------|--------------|
-| pgadm                | Content Cell  |              |
-| postgres             | Content Cell  |              | 
-|kc                    |               |              |
+> [!NOTE]
+> **Explication of docker-compose.yml**
+> rtrt
 
 
