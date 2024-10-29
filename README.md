@@ -98,5 +98,17 @@ docker compose up -d
 > [!NOTE]
 > This command will download the necessary images if they aren’t already present and start Keycloak, PostgreSQL, and PgAdmin4 containers.
 
+#### Step3 - Access Keycloak and PgAdmin
+- **Keycloak**: Open http://localhost:8484 and log in with the admin credentials defined in docker-compose.yml
+- **PgAdmin4**: Open http://localhost:9081 and log in using the email and password specified for PgAdmin4 in docker-compose.yml
 
+Once logged into PgAdmin4:
+
+1. Add a new server connection.
+2. Set value in connection section to connect to the PostgreSQL instance: 
+| Variable      | Value |
+| ------------- | ------------- |
+| host          | docker.host.internal  |
+| username      | Content Cell  |
+|password       |               |
 
