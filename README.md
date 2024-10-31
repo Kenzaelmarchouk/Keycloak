@@ -28,23 +28,23 @@ This docker-compose.yml file defines a multi-container setup with three services
 Services:
 
 1. pgadm:
-   Runs pgAdmin4 image.
-   Environment variables set the default email and password for logging into pgAdmin.
-   Exposes port 9081 (in localhost) to port 80 (inside the container).
-   Connects to the localnet network.
-2. postgres:
+- Runs pgAdmin4 image.
+- Environment variables set the default email and password for logging into pgAdmin.
+- Exposes port 9081 (in localhost) to port 80 (inside the container).
+- Connects to the localnet network.
+3. postgres:
    Runs a PostgreSQL version 15.4 (lightweight Alpine version) image.
    Stores database data on the host machine (./dbdata/).
    Exposes port 5432 for database connections.
    Environment variables set the database username and password.
-3. kc:
+4. kc:
    Runs Keycloak version 26 image.
    Runs Keycloak in development mode with specific ports (8484 for HTTP and 8444 for HTTPS).
    Depends on the PostgreSQL service.
    Various environment variables configure database connections, Keycloak admin credentials, and other settings.
    Exposes ports 8484 and 8444 for external access.
    Connects to the localnet network.
-4. Networks:
+5. Networks:
    localnet: Defines a custom Docker network to allow the containers to communicate with each other.
 
 #### Step2 - Creates and starts containers
