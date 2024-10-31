@@ -15,11 +15,7 @@ Docker and Docker compose Come pre-installed with **Docker Desktop**
 ### Getting Started
 #### Step1 - Create docker-compose.yml file
 Start by cloning this repository, which includes the docker-compose.yml file you’ll need.
-```
-git clone https://github.com/yourusername/keycloak-postgresql-pgadmin-docker.git
-cd keycloak-postgresql-pgadmin-docker
 
-```
 
 
 ##### Explication of docker-compose.yml
