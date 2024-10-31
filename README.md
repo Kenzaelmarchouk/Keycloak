@@ -14,82 +14,39 @@ Docker and Docker compose Come pre-installed with **Docker Desktop**
 
 ### Getting Started
 #### Step1 - Create docker-compose.yml file
-
-docker-compose.yml
-```command
-
-
-version: '3'
- 
-services:
-  pgadm:
-    image: dpage/pgadmin4:latest
-    environment:
-      PGADMIN_DEFAULT_PASSWORD: 123password
-      PGADMIN_DEFAULT_EMAIL: test@example.com
-      PGADMIN_DISABLE_POSTFIX: true
-    ports:
-      - 9081:80
-    networks:
-      - localnet
- 
-  postgres:
-    image: postgres:15.4-alpine3.18
-    volumes:
-      - ./dbdata/:/var/lib/postgresql/data/
-    
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_USER: keycloak
-      POSTGRES_PASSWORD: Pwd123
-    networks:
-      - localnet
- 
-  kc:
-    image: quay.io/keycloak/keycloak:26.0.0
-    container_name: Keycloak
-    command: |
-      start-dev
-      --http-port 8484 
-      --https-port 8444
-      --metrics-enabled=true
-      --log-level="INFO"
-
-    volumes:
-      - ./providers/:/opt/keycloak/providers/
-  
-    depends_on:
-      - postgres
-    environment:
-      KC_DB: postgres
-      KC_DB_URL_HOST: postgres
-      KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: admin
-      KC_DB_USERNAME: keycloak
-      KC_DB_PASSWORD: Pwd123
-      KC_HEALTH_ENABLED: false
-      KC_METRICS_ENABLED: false
-      KC_HOSTNAME_STRICT: false
-      KC_PROXY_ADDRESS_FORWARDING: true
-      KC_HTTP_ENABLED: true
-      QUARKUS_HTTP_ACCESS_LOG_ENABLED: true
-      KC_PROXY: edge
-      KC_HOSTNAME_STRICT_HTTPS: false
-
-    ports:
-      - 8444:8444
-      - 8484:8484
-    networks:
-      - localnet
-
-
-
-networks:
-  localnet:
-    name: localnet
+Start by cloning this repository, which includes the docker-compose.yml file you’ll need.
 ```
-**Explication of docker-compose.yml**
+git clone https://github.com/yourusername/keycloak-postgresql-pgadmin-docker.git
+cd keycloak-postgresql-pgadmin-docker
+
+```
+
+
+##### Explication of docker-compose.yml
+This docker-compose.yml file defines a multi-container setup with three services: pgAdmin, PostgreSQL, and Keycloak.
+
+Services:
+
+1. pgadm:
+   Runs pgAdmin4 image.
+   Environment variables set the default email and password for logging into pgAdmin.
+   Exposes port 9081 (in localhost) to port 80 (inside the container).
+   Connects to the localnet network.
+2. postgres:
+   Runs a PostgreSQL version 15.4 (lightweight Alpine version) image.
+   Stores database data on the host machine (./dbdata/).
+   Exposes port 5432 for database connections.
+   Environment variables set the database username and password.
+3. kc:
+   Runs Keycloak version 26 image.
+   Runs Keycloak in development mode with specific ports (8484 for HTTP and 8444 for HTTPS).
+   Depends on the PostgreSQL service.
+   Various environment variables configure database connections, Keycloak admin credentials, and other settings.
+   Exposes ports 8484 and 8444 for external access.
+   Connects to the localnet network.
+4. Networks:
+   localnet: Defines a custom Docker network to allow the containers to communicate with each other.
+
 #### Step2 - Creates and starts containers
 Start all services with Docker Compose:
 ```
