@@ -33,17 +33,17 @@ Services:
 - Exposes port 9081 (in localhost) to port 80 (inside the container).
 - Connects to the localnet network.
 3. postgres:
-   Runs a PostgreSQL version 15.4 (lightweight Alpine version) image.
-   Stores database data on the host machine (./dbdata/).
-   Exposes port 5432 for database connections.
-   Environment variables set the database username and password.
+- Runs a PostgreSQL version 15.4 (lightweight Alpine version) image.
+- Stores database data on the host machine (./dbdata/).
+- Exposes port 5432 for database connections.
+- Environment variables set the database username and password.
 4. kc:
-   Runs Keycloak version 26 image.
-   Runs Keycloak in development mode with specific ports (8484 for HTTP and 8444 for HTTPS).
-   Depends on the PostgreSQL service.
-   Various environment variables configure database connections, Keycloak admin credentials, and other settings.
-   Exposes ports 8484 and 8444 for external access.
-   Connects to the localnet network.
+- Runs Keycloak version 26 image.
+- Runs Keycloak in development mode with specific ports (8484 for HTTP and 8444 for HTTPS).
+- Depends on the PostgreSQL service.
+- Various environment variables configure database connections, Keycloak admin credentials, and other settings.
+- Exposes ports 8484 and 8444 for external access.
+- Connects to the localnet network.
 5. Networks:
    localnet: Defines a custom Docker network to allow the containers to communicate with each other.
 
