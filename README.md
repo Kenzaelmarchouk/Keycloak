@@ -10,7 +10,9 @@ This tutorial sets up and configured in a single docker-compose.yml file:
 ### Prerequisites
 1. **Docker**
 2. **Docker compose**
-Docker and Docker compose Come pre-installed with **Docker Desktop**
+> [!NOTE]
+> Docker and Docker compose Come pre-installed with **Docker Desktop**.
+
 
 ### Getting Started
 #### Step1 - Create docker-compose.yml file
