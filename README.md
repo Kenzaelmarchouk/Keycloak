@@ -8,8 +8,8 @@ This tutorial sets up and configured in a single docker-compose.yml file:
 - **PgAdmin4**: A web-based GUI for PostgreSQL, making it easier to explore and manage the database.
 
 ### Prerequisites
-**Docker**
-**Docker compose**
+1. **Docker**
+2. **Docker compose**
 Docker and Docker compose Come pre-installed with **Docker Desktop**
 
 ### Getting Started
